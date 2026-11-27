@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta name="description" content="Rona Goods — pilihan aksesori dan kebutuhan sehari-hari dengan desain timeless, simpel, dan penuh karakter.">
+  <title>Rona Goods — Everyday Objects, Better Living</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    <p>Thoughtful essentials for everyday living</p>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="#" class="brand" aria-label="Rona Goods home">
+        <span class="brand-mark">r.</span>
+        <span class="brand-name">rona goods<span class="brand-dot">.</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#story">Our Story</a>
+        <a href="#newsletter">Journal</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" id="searchToggle" aria-label="Cari produk">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-button wishlist-header" id="wishlistToggle" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="action-count" id="wishlistCount">0</span>
+        </button>
+        <button class="icon-button bag-button" id="cartToggle" aria-label="Keranjang">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="action-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-inner">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" id="searchInput" placeholder="Cari produk favoritmu..." autocomplete="off">
+        <button id="closeSearch" aria-label="Tutup pencarian"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content container">
+        <div class="hero-copy">
+          <span class="eyebrow">THE EVERYDAY COLLECTION — 2026</span>
+          <h1>Little things.<br><em>Lovely living.</em></h1>
+          <p>Temukan benda-benda sederhana yang membuat hari-harimu terasa lebih istimewa.</p>
+          <a href="#shop" class="button button-dark">Explore collection <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="hero-note">
+            <span class="note-line"></span>
+            <span>Designed for your everyday moments</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=1200&q=85" alt="Interior minimalis dengan dekorasi natural">
+          <div class="hero-stamp">
+            <span>GOOD</span>
+            <span>THINGS</span>
+            <span>ONLY.</span>
+          </div>
+          <div class="hero-image-caption">Objects with a little more meaning.</div>
+        </div>
+      </div>
+      <div class="hero-bottom container">
+        <span>01 / 03</span>
+        <span class="hero-bottom-line"></span>
+        <span>MADE TO BE YOURS</span>
+      </div>
+    </section>
+
+    <section class="benefits container">
+      <div class="benefit-item">
+        <i class="fa-solid fa-box-open"></i>
+        <div><strong>Carefully packed</strong><span>Every order, with care</span></div>
+      </div>
+      <div class="benefit-item">
+        <i class="fa-solid fa-leaf"></i>
+        <div><strong>Thoughtful selection</strong><span>Quality over quantity</span></div>
+      </div>
+      <div class="benefit-item">
+        <i class="fa-solid fa-heart"></i>
+        <div><strong>Made for everyday</strong><span>Simple things, lasting joy</span></div>
+      </div>
+    </section>
+
+    <section class="shop-section section-padding" id="shop">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">A LITTLE SOMETHING FOR YOU</span>
+            <h2>Find your <em>favorites.</em></h2>
+          </div>
+          <p>Curated pieces to make your everyday a little more beautiful.</p>
+        </div>
+
+        <div class="shop-toolbar">
+          <div class="category-list" id="categoryList">
+            <button class="category-button active" data-category="all">All items</button>
+            <button class="category-button" data-category="bags">Bags</button>
+            <button class="category-button" data-category="accessories">Accessories</button>
+            <button class="category-button" data-category="home">Home living</button>
+            <button class="category-button" data-category="stationery">Stationery</button>
+          </div>
+
+          <div class="sort-wrap">
+            <label for="sortSelect">Sort by</label>
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="low-high">Price: Low to high</option>
+              <option value="high-low">Price: High to low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="result-info">
+          <span id="resultCount">Showing products</span>
+          <button class="text-button" id="clearFilters">Clear filters <i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>Nothing found</h3>
+          <p>Coba kata kunci atau kategori yang berbeda.</p>
+          <button class="button button-dark" id="resetSearch">Show all products</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section section-padding" id="story">
+      <div class="container story-grid">
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1100&q=85" alt="Ruang dengan dekorasi rumah minimalis">
+          <span class="image-label">THE ART OF SLOW LIVING</span>
+        </div>
+        <div class="story-copy">
+          <span class="eyebrow">A NOTE FROM RONA</span>
+          <h2>Less, but<br><em>meaningful.</em></h2>
+          <p>We believe the little things matter. Sebuah tas yang menemanimu setiap hari, cangkir favorit untuk kopi pagi, atau buku catatan untuk ide-ide kecilmu.</p>
+          <p>Rona Goods hadir untuk mengkurasi barang-barang sederhana yang mengutamakan fungsi, kualitas, dan karakter.</p>
+          <a href="#shop" class="underlined-link">Discover our collection <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="story-signature">with love, <span>rona.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="container quote-inner">
+        <span class="eyebrow">A GENTLE REMINDER</span>
+        <h2>“Make room for things<br>that make you <em>feel good.</em>”</h2>
+        <span class="quote-decoration">R.</span>
+      </div>
+    </section>
+
+    <section class="newsletter-section section-padding" id="newsletter">
+      <div class="container newsletter-inner">
+        <div>
+          <span class="eyebrow">THE RONA LETTER</span>
+          <h2>A little note<br><em>in your inbox.</em></h2>
+          <p>Get updates on new arrivals, little inspirations, and special treats.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <label for="newsletterEmail">Your email address</label>
+          <div class="newsletter-input-wrap">
+            <input type="email" id="newsletterEmail" placeholder="hello@example.com" required>
+            <button type="submit" aria-label="Daftar newsletter"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <small>By subscribing, you agree to receive updates from Rona Goods.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="#" class="brand">
+          <span class="brand-mark">r.</span>
+          <span class="brand-name">rona goods<span class="brand-dot">.</span></span>
+        </a>
+        <p>Everyday objects, thoughtfully chosen.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="#shop">Shop all</a>
+        <a href="#story">Our story</a>
+        <a href="#newsletter">Journal</a>
+      </div>
+      <div class="footer-column">
+        <h4>Need help?</h4>
+        <a href="#" id="footerContact">Contact us</a>
+        <a href="#shop">Shipping information</a>
+        <a href="#shop">Frequently asked</a>
+      </div>
+      <div class="footer-column">
+        <h4>Follow along</h4>
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram <i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok <i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="currentYear"></span> Rona Goods. Concept store demo.</span>
+      <span>Made with care, in Indonesia.</span>
+    </div>
+  </footer>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Cart drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag">
+    <div class="drawer-header">
+      <div>
+        <span class="eyebrow">YOUR SELECTION</span>
+        <h3>Your bag <span id="drawerCartCount">(0)</span></h3>
+      </div>
+      <button class="close-button" id="closeCart" aria-label="Tutup keranjang"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <h4>Your bag is waiting</h4>
+      <p>Looks like you haven't added anything yet.</p>
+      <button class="button button-dark" id="continueShopping">Explore products</button>
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">Rp0</strong>
+      </div>
+      <p>Shipping and other costs will be discussed via WhatsApp.</p>
+      <button class="button button-dark checkout-button" id="checkoutButton">Continue to checkout <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </aside>
+
+  <!-- Product quick view -->
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-label="Detail produk">
+    <button class="modal-close close-button" id="closeProductModal" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    <div id="productModalContent"></div>
+  </div>
+
+  <!-- Checkout modal -->
+  <div class="modal checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Checkout">
+    <button class="modal-close close-button" id="closeCheckoutModal" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    <div class="checkout-content">
+      <span class="eyebrow">ALMOST YOURS</span>
+      <h2>Complete your <em>order.</em></h2>
+      <p>Isi detail berikut. Pesanan akan diteruskan ke WhatsApp.</p>
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="customerName">Full name</label>
+          <input type="text" id="customerName" placeholder="Nama lengkap" required>
+        </div>
+        <div class="form-group">
+          <label for="customerPhone">WhatsApp number</label>
+          <input type="tel" id="customerPhone" placeholder="08xxxxxxxxxx" required>
+        </div>
+        <div class="form-group">
+          <label for="customerAddress">Delivery address</label>
+          <textarea id="customerAddress" rows="3" placeholder="Alamat lengkap pengiriman" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="customerNote">Order notes (optional)</label>
+          <textarea id="customerNote" rows="2" placeholder="Catatan tambahan..."></textarea>
+        </div>
+        <div class="checkout-total">
+          <span>Order subtotal</span>
+          <strong id="checkoutTotal">Rp0</strong>
+        </div>
+        <button class="button button-dark checkout-submit" type="submit">Send order via WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
